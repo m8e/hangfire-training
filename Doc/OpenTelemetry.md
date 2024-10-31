@@ -175,8 +175,8 @@ Telemetry data tries to answer questions like:
  - What is the slowest part of a request?
  - Etc.
 
-**So what is common process to determin problem?**
-First, you need to look in Tracing Graph and identify the problem. Based on the request flow, we can see the slowest part or where the problem occurs in time. Which operations were successful and which failed. We collect `SpanIds` and `TraceId` that we are interested in and look for contextual logs to get more details about what really happened. For this reason, we use traces and logs to determine the overall experience of the application.
+**So what is the common process to determine a problem?**
+First, you need to look in the Tracing Graph and identify the problem. Based on the request flow, we can see the slowest part or where the problem occurs in time. Which operations were successful and which failed. We collect `SpanIds` and `TraceId` that we are interested in and look for contextual logs to get more details about what really happened. For this reason, we use traces and logs to determine the overall experience of the application.
 
 In order for `OpenTelemetry` to be successful in the logging space, the company is trying to support existing logs and logging libraries so that they work well together.
 
@@ -224,16 +224,16 @@ The term *instrumentation* is used by several languages to encapsulate tracing, 
 With `NetCore` you have several ways to measure and collect traces.
 
 1) Opentelemetry SDK 
-2) NetCore Framework nativ support
+2) NetCore Framework native support
 3) 3-Part Libs and SDK (Elastic APM SDK...)
 
-**The nativ support is the prefered way** since the NetCore team inject `opentelemetry` support to [`System.Diagnostics APIs`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics?view=net-5.0) class implementaion. This helps us to reuse existing instrumentation.
+**The native support is the preferred way** since the NetCore team inject `opentelemetry` support to [`System.Diagnostics APIs`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics?view=net-5.0) class implementaion. This helps us to reuse existing instrumentation.
 
-`Opentelemetry` / `NetCore` equialents are:
-- For Opentelemetry `Tracer` equialent is .Net [`ActivitySource`](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-collection-walkthroughs) class.
-- For Opentelemety `Span` equialent is .Net [`Activity`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.activity?view=net-5.0) class.
+`Opentelemetry` / `NetCore` equivalents are:
+- For Opentelemetry `Tracer` equivalent is .Net [`ActivitySource`](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-collection-walkthroughs) class.
+- For Opentelemetry `Span` equivalent is .Net [`Activity`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.activity?view=net-5.0) class.
 
-You can read more about nativ `Opntelemerty` support under officail [Microsoft Release Note](https://devblogs.microsoft.com/dotnet/opentelemetry-net-reaches-v1-0/)
+You can read more about native `Opentelemetry` support under officail [Microsoft Release Note](https://devblogs.microsoft.com/dotnet/opentelemetry-net-reaches-v1-0/)
 
 All other SDK options give you +- the same functionality. The naming of the library API may be different, of course, but that's a matter of implementation.
 
@@ -411,7 +411,7 @@ builder.SetResourceBuilder(ResourceBuilder
 
 ### Frontend React Setup
 
-For front-end clients, opentelemtry provides the main SDK [opentelemetry-js](https://github.com/open-telemetry/opentelemetry-js). There are also several additional packages needed for instrumenting exporting the traces.
+For front-end clients, Opentelemetry provides the main SDK [opentelemetry-js](https://github.com/open-telemetry/opentelemetry-js). There are also several additional packages needed for instrumenting exporting the traces.
 
 Required imports from `package.json` are:
 
