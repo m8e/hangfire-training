@@ -41,7 +41,7 @@ That's why *Open Telemetry* exists as a new standard, and as of 2021, *OpenTelem
 >**Opentelemetry** is a standardised way to understand the entire chain of events and the complex interaction between microservices.
 > &#10240;
 
-**This is what you wil get at the end**
+**This is what you will get at the end**
 
 This real example from this demo that includes frontend to backend tracing and monitoring. You can see all operations in time, with the option to see every detail and logs for all spans.
 
